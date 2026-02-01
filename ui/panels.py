@@ -30,10 +30,11 @@ class ResultsPanel(QWidget):
     def __init__(self, parent: QWidget | None = None) -> None:
         super().__init__(parent)
         layout = QVBoxLayout(self)
+        layout.setContentsMargins(0, 0, 0, 0)
         self._text = QPlainTextEdit(self)
         self._text.setReadOnly(True)
         self._text.setPlaceholderText("Results will appear here when a pipeline is running.")
-        layout.addWidget(self._text)
+        layout.addWidget(self._text, stretch=1)
 
     def update_results(self, results: dict[str, Any] | None) -> None:
         if results is None:
