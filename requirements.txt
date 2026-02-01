@@ -1,0 +1,10 @@
+# MediaPipe GUI Desktop App
+# Python 3.11+
+
+PySide6>=6.6.0
+opencv-python>=4.9.0
+mediapipe>=0.10.14
+numpy>=1.24.0
+
+# Windows: exact camera names via DirectShow (same order as OpenCV CAP_DSHOW)
+pygrabber>=0.2; sys_platform == "win32"
